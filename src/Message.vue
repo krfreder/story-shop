@@ -5,12 +5,13 @@
 </template>
 
 <script>
+import { words } from './words';
 export default {
   el: '#msg',
   data () {
     return {
-      message: 'Look at that, they changed'
+      message: words,
     }
   }
-};
+}
 </script>
