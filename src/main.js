@@ -1,9 +1,7 @@
 import Vue from 'vue';
 import App from './App.vue';
-import Message from './Message.vue';
-import Generate from './Generate.vue';
+import Generate from './components/Generate.vue';
 
-Vue.component('app-hello', Message);
 Vue.component('app-generate', Generate);
 
 Vue.config.productionTip = false

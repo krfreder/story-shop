@@ -1,6 +1,5 @@
 <template>
   <div id="#app">
-    <app-hello></app-hello>
     <app-generate></app-generate>
   </div>
 </template>
