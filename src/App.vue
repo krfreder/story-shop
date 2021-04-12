@@ -1,6 +1,7 @@
 <template>
   <div id="#app">
     <app-generate></app-generate>
+    <!-- <app-button></app-button> -->
   </div>
 </template>
 
