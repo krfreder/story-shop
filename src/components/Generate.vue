@@ -13,7 +13,7 @@ import { settingList } from '../js/settingList';
 import { genderList } from '../js/genderList';
 import { charTraitList } from '../js/charTraitList';
 import { handler } from '../js/randomize';
-// import { randomize } from './js/randomize';
+
 export default {
   name: 'generate',
   data () {
