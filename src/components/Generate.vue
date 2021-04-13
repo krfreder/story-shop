@@ -25,9 +25,7 @@ export default {
       charTraits: charTraitList,
     }
   },
-  mounted () {
-    handler;
-  }
+
   // methods: {
   //   randyGenre: function () {
   //     this.genres = require('randy').choice(genreList);
