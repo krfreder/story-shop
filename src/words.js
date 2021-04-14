@@ -1,1 +1,0 @@
-export const words = 'How about them apples?';
