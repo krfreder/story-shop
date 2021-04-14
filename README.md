@@ -1,19 +1,14 @@
-# story-shop
+# one-stop-story-shop
+Building a prompt generator for writers to practice their art. It will randomly generate a new prompt on button click featuring:
+- Genre
+- Setting
+- Word Prompts
 
-## Project setup
-```
-npm install
-```
+I am learning the following for the project:
+- Vue
+- Sentencer module
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+I am utilizing the following languages:
+- Javascript (NodeJS)
+- HTML
+- CSS
