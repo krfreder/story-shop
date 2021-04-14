@@ -4,6 +4,7 @@
     <h1 v-show="isGenerated">Genre: {{ genres }}</h1>
     <h1 v-show="isGenerated">Setting: {{ settings }}</h1>
     <h1 v-show="isGenerated">Main Character: {{ age }} / {{ genders }} / {{ charTraits }}</h1>
+    <h1 v-show="isGenerated">Word to include: {{ prompts }}</h1>
   </div>
 </template>
 
@@ -23,6 +24,7 @@ export default {
       age: 0,
       genders: genderList,
       charTraits: charTraitList,
+      prompts: "",
     }
   },
   methods: {
@@ -41,12 +43,16 @@ export default {
     randyCharTrait: function () {
       this.charTraits = require('randy').choice(charTraitList);
     },
+    sentencerPrompts: function () {
+      this.prompts = require('sentencer').make("{{ noun }}");
+    },
     handler: function () {
       this.randyGenre();
       this.randySetting();
       this.randyAge();
       this.randyGender();
       this.randyCharTrait();
+      this.sentencerPrompts();
       this.isGenerated = true;
     }
   }
