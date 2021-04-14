@@ -1,9 +1,9 @@
 <template>
   <div id="generate">
+    <button id="button" @click="handler()">Generate</button>
     <h1 v-show="isGenerated">Genre: {{ genres }}</h1>
     <h1 v-show="isGenerated">Setting: {{ settings }}</h1>
     <h1 v-show="isGenerated">Main Character: {{ age }} / {{ genders }} / {{ charTraits }}</h1>
-    <button @click="handler()">Generate</button>
   </div>
 </template>
 
@@ -52,3 +52,15 @@ export default {
   }
 }
 </script>
+
+<style>
+#generate {
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+#button {
+  font-size: 80px;
+  border-radius: 10px;
+}
+</style>
