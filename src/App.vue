@@ -1,7 +1,6 @@
 <template>
   <div id="#app">
     <app-generate></app-generate>
-    <!-- <app-button></app-button> -->
   </div>
 </template>
 
@@ -19,7 +18,10 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
+}
+
+body {
+  background-color: #a29dfc;
 }
 </style>
