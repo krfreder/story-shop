@@ -16,7 +16,7 @@
         <tr>
           <td>Main Character:</td>
           <td>
-          <ul>
+          <ul id="list">
             <li>Age: {{ age }}</li>
             <li>Gender: {{ genders }}</li>
             <li>Character Trait: {{ charTraits }}</li>
@@ -81,39 +81,45 @@ export default {
 
 <style scoped>
 #generate {
-  /* text-align: center; */
   margin-top: 60px;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  align-content: center;
 }
-#button {
+#generate #button {
   font-size: 80px;
+  text-shadow: 2px 2px 3px #93aef9;
   border-radius: 10px;
   background-color: #76cef2;
   border: 4px solid #58efec;
+  text-align: center;
+  padding: 20px 100px 20px 100px;
 }
-#table {
-  /* table-layout: fixed; */
-  /* width: 50%; */
+#generate #table {
+  text-shadow: 1px 1px 2px #b18dff;
+  text-align: left;
+  margin-top: 40px;
   font-size: 40px;
-  /* margin-left: auto;
-  margin-right: auto; */
-  border-collapse:collapse;
-  border:4px solid #000000;
+  border-collapse: collapse;
+  border: 4px solid #000000;
   border-spacing: 0;
+  border-radius: 10px;
 }
-tr:nth-child(even) {
+#table tr:nth-child(even) {
   background-color: #93aef9;
 }
-tr:nth-child(odd) {
+#table tr:nth-child(odd) {
   background-color: #85bef6;
 }
-table td {
-  /* border:4px solid #b18dff; */
+#table td {
   border: 4px solid #a29dfc;
   padding: 8px;
+}
+#list {
+  list-style-type: none;
+  padding: 0;
 }
 </style>
