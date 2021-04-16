@@ -5,6 +5,8 @@ export const genderList = [
     'Butch',
     'Cis-Man',
     'Cis-Woman',
+    'Demiboy',
+    'Demigirl',
     'Femme',
     'Gender fluid',
     'Gender neutral',
