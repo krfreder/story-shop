@@ -23,6 +23,14 @@
           </ul>
           </td>
         </tr>
+        <tr>
+          <td>Prompts:</td>
+          <td>
+          <ol id="list">
+            <li v-for="(prompt, index) in prompts" :key="index">{{index + 1}}. {{ prompt }}</li>
+          </ol>
+          </td>
+        </tr>
       </table>
     </div>
   </section>
@@ -33,6 +41,7 @@ import { genreList } from '../js/genreList';
 import { settingList } from '../js/settingList';
 import { genderList } from '../js/genderList';
 import { charTraitList } from '../js/charTraitList';
+import { promptsList } from '../js/promptsList';
 
 export default {
   name: 'generate',
@@ -44,7 +53,7 @@ export default {
       age: 0,
       genders: genderList,
       charTraits: charTraitList,
-      prompts: "",
+      prompts: []
     }
   },
   methods: {
@@ -64,7 +73,11 @@ export default {
       this.charTraits = require('randy').choice(charTraitList);
     },
     sentencerPrompts: function () {
-      this.prompts = require('sentencer').make("{{ noun }}");
+      let i = 0;
+      for(i; i < 31; i++) {
+        let randyPrompt = require('sentencer').make(require('randy').choice(promptsList));
+        this.prompts.push(randyPrompt);
+      }
     },
     handler: function () {
       this.randyGenre();
@@ -102,6 +115,7 @@ export default {
   text-shadow: 1px 1px 2px #b18dff;
   text-align: left;
   margin-top: 40px;
+  margin-bottom: 40px;
   font-size: 40px;
   border-collapse: collapse;
   border: 4px solid #000000;
