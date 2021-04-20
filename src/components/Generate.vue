@@ -26,9 +26,9 @@
         <tr>
           <td>Prompts:</td>
           <td>
-          <ol id="list">
-            <li v-for="(prompt, index) in prompts" :key="index">{{index + 1}}. {{ prompt }}</li>
-          </ol>
+          <ul id="list">
+            <li v-for="(prompt, index) in prompts" :key="index">{{ index + 1 }}. {{ prompt }}</li>
+          </ul>
           </td>
         </tr>
       </table>
@@ -53,7 +53,8 @@ export default {
       age: 0,
       genders: genderList,
       charTraits: charTraitList,
-      prompts: []
+      prompts: [],
+      // test: [],
     }
   },
   methods: {
@@ -73,10 +74,10 @@ export default {
       this.charTraits = require('randy').choice(charTraitList);
     },
     sentencerPrompts: function () {
-      let i = 0;
-      for(i; i < 31; i++) {
-        let randyPrompt = require('sentencer').make(require('randy').choice(promptsList));
-        this.prompts.push(randyPrompt);
+      const tempArr = [];
+      for(let i = 0; i < 31; i++) {
+        tempArr.push(require('sentencer').make(require('randy').choice(promptsList)));
+        this.prompts = tempArr;
       }
     },
     handler: function () {
