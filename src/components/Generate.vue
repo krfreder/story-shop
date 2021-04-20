@@ -3,20 +3,20 @@
     <div>
       <button id="button" @click="handler()">Generate</button>
     </div>
-    <div id="table">
+    <div class="table">
       <table v-show="isGenerated">
         <tr>
-          <td>Genre:</td>
+          <td id="bold">Genre:</td>
           <td>{{ genres }}</td>
         </tr>
         <tr>
-          <td>Starting Setting:</td>
+          <td id="bold">Starting Setting:</td>
           <td>{{ settings }}</td>
         </tr>
         <tr>
-          <td>Main Character:</td>
+          <td id="bold">Main Character:</td>
           <td>
-          <ul id="list">
+          <ul class="list">
             <li>Age: {{ age }}</li>
             <li>Gender: {{ genders }}</li>
             <li>Character Trait: {{ charTraits }}</li>
@@ -24,9 +24,9 @@
           </td>
         </tr>
         <tr>
-          <td>Prompts:</td>
+          <td id="bold">Prompts:</td>
           <td>
-          <ul id="list">
+          <ul class="list">
             <li v-for="(prompt, index) in prompts" :key="index">{{ index + 1 }}. {{ prompt }}</li>
           </ul>
           </td>
@@ -93,47 +93,55 @@ export default {
 </script>
 
 <style scoped>
+/* general styles */
 #generate {
-  margin-top: 60px;
+  margin: 5%;
   height: 100%;
+  text-transform: capitalize;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
 }
-#generate #button {
-  font-size: 80px;
-  text-shadow: 2px 2px 3px #93aef9;
-  border-radius: 10px;
+/* button styles */
+#button {
   background-color: #76cef2;
-  border: 4px solid #58efec;
+  font-size: 8rem;
   text-align: center;
+  text-shadow: 2px 2px 3px #93aef9;
+  border: 4px solid #58efec;
+  border-radius: 10px;
   padding: 20px 100px 20px 100px;
 }
-#generate #table {
-  text-shadow: 1px 1px 2px #b18dff;
+/* table styles */
+.table {
+  margin: 5%;
+  font-size: 3rem;
   text-align: left;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-size: 40px;
-  border-collapse: collapse;
+  text-shadow: 1px 1px 2px #b18dff;
   border: 4px solid #000000;
+  border-collapse: collapse;
   border-spacing: 0;
   border-radius: 10px;
 }
-#table tr:nth-child(even) {
+.table tr:nth-child(even) {
   background-color: #93aef9;
 }
-#table tr:nth-child(odd) {
+.table tr:nth-child(odd) {
   background-color: #85bef6;
 }
-#table td {
+.table td {
   border: 4px solid #a29dfc;
-  padding: 8px;
+  padding: 2%;
 }
-#list {
+/* list styles */
+.list {
   list-style-type: none;
   padding: 0;
+  line-height: 1.6;
+}
+#bold {
+  font-weight: bold;
 }
 </style>
