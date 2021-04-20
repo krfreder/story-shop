@@ -54,7 +54,6 @@ export default {
       genders: genderList,
       charTraits: charTraitList,
       prompts: [],
-      // test: [],
     }
   },
   methods: {
