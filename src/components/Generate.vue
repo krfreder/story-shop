@@ -7,19 +7,19 @@
       <table v-show="isGenerated">
         <tr>
           <td id="bold">Genre:</td>
-          <td>{{ genres }}</td>
+          <td @click="randyGenre()">{{ genres }}</td>
         </tr>
         <tr>
           <td id="bold">Starting Setting:</td>
-          <td>{{ settings }}</td>
+          <td @click="randySetting()">{{ settings }}</td>
         </tr>
         <tr>
           <td id="bold">Main Character:</td>
           <td>
           <ul class="list">
-            <li>Age: {{ age }}</li>
-            <li>Gender: {{ genders }}</li>
-            <li>Character Trait: {{ charTraits }}</li>
+            <li @click="randyAge()">Age: {{ age }}</li>
+            <li @click="randyGender()">Gender: {{ genders }}</li>
+            <li @click="randyCharTrait()">Character Trait: {{ charTraits }}</li>
           </ul>
           </td>
         </tr>
@@ -27,7 +27,7 @@
           <td id="bold">Prompts:</td>
           <td>
           <ul class="list">
-            <li v-for="(prompt, index) in prompts" :key="index">{{ index + 1 }}. {{ prompt }}</li>
+            <li v-for="(prompt, index) in prompts" :key="index" @click="sentencerPrompts()">{{ index + 1 }}. {{ prompt }}</li>
           </ul>
           </td>
         </tr>
