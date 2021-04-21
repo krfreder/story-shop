@@ -95,7 +95,7 @@ export default {
 <style scoped>
 /* general styles */
 #generate {
-  margin: 5%;
+  margin: 15%;
   height: 100%;
   text-transform: capitalize;
   display: flex;
@@ -107,10 +107,10 @@ export default {
 /* button styles */
 #button {
   background-color: #76cef2;
-  font-size: 8rem;
+  font-size: 12rem;
   text-align: center;
-  text-shadow: 2px 2px 3px #93aef9;
-  border: 4px solid #58efec;
+  text-shadow: 5px 5px 8px #93aef9;
+  border: 6px solid #58efec;
   border-radius: 10px;
   padding: 20px 100px 20px 100px;
 }

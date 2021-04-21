@@ -6,7 +6,7 @@
             <ol class="list">
                 <li>Scroll down</li>
                 <li>Click "Generate"</li>
-                <li>You will randomly be given:
+                <li>You will randomly receive:
                     <ul>
                         <li>A genre</li>
                         <li>A starting setting</li>
@@ -14,12 +14,15 @@
                         <li>A list of one-word prompts</li>
                     </ul>
                 </li>
-                <li>Don't like what you got?</li>
+                <li>Don't like a specific result (ie: genre, setting)?</li>
                     <ul>
-                        <li>Click the word for a new one</li>
+                        <li>Click the result for a new one</li>
+                    </ul>
+                <li>Don't like any of it?</li>
+                    <ul>
                         <li>Click "Generate" for a new prompt</li>
                     </ul>
-                <li>Get writing</li>
+                <li>Happy writing!  : )</li>
             </ol>
         </div>
     </section>
