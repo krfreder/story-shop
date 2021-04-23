@@ -23,10 +23,12 @@
           </ul>
           </td>
         </tr>
+      </table>
+      <table v-show="isGenerated">
         <tr>
           <td id="bold">Prompts:</td>
           <td>
-          <ul class="list">
+          <ul class="list" id="two-column-list">
             <li v-for="(prompt, index) in prompts" :key="index" @click="sentencerPrompts()">{{ index + 1 }}. {{ prompt }}</li>
           </ul>
           </td>
@@ -95,7 +97,7 @@ export default {
 <style scoped>
 /* general styles */
 #generate {
-  margin: 15%;
+  margin-top: 15%;
   height: 100%;
   text-transform: capitalize;
   display: flex;
@@ -124,6 +126,10 @@ export default {
   border-collapse: collapse;
   border-spacing: 0;
   border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  table-layout: auto;
+  width: auto;
 }
 .table tr:nth-child(even) {
   background-color: #93aef9;
@@ -140,6 +146,11 @@ export default {
   list-style-type: none;
   padding: 0;
   line-height: 1.6;
+}
+#two-column-list {
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
 }
 #bold {
   font-weight: bold;
