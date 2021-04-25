@@ -2,6 +2,7 @@
     <section>
         <img src="../assets/ossp_logo.png" alt="Text logo reading One Stop Story Prompts"/>
         <div>
+            <button>Donates</button>
             <h1 class="header">How to use this site</h1>
             <ol class="list">
                 <li>Scroll down</li>
