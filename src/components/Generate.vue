@@ -26,7 +26,7 @@
       </table>
       <table v-show="isGenerated">
         <tr>
-          <td id="bold">Prompts:</td>
+          <td id="purple-background-bold">Prompts:</td>
           <td>
           <ul class="list" id="two-column-list">
             <li v-for="(prompt, index) in prompts" :key="index" @click="sentencerPrompts()">{{ index + 1 }}. {{ prompt }}</li>
@@ -119,7 +119,7 @@ export default {
 /* table styles */
 .table {
   margin: 5%;
-  font-size: 3rem;
+  font-size: 2.6rem;
   text-align: left;
   text-shadow: 1px 1px 2px #b18dff;
   border: 4px solid #000000;
@@ -140,6 +140,10 @@ export default {
 .table td {
   border: 4px solid #a29dfc;
   padding: 2%;
+}
+#purple-background-bold {
+  background-color: #93aef9;
+  font-weight: bold;
 }
 /* list styles */
 .list {

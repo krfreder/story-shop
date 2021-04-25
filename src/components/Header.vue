@@ -14,7 +14,7 @@
                         <li>A list of one-word prompts</li>
                     </ul>
                 </li>
-                <li>Don't like a specific result (ie: genre, setting)?</li>
+                <li>Don't like a specific result (ie: genre, age)?</li>
                     <ul>
                         <li>Click the result for a new one</li>
                     </ul>
