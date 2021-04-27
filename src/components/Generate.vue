@@ -17,7 +17,7 @@
           <td id="bold">Main Character:</td>
           <td>
           <ul class="list">
-            <li tabindex="0" @click="randyAge()" @keyup.enter="randyAge()">Age: {{ age }}</li>
+            <li tabindex="0" @click="randyAge()" @keyup.enter="randyAge()" >Age: {{ age }}</li>
             <li tabindex="0" @click="randyGender()" @keyup.enter="randyGender()">Gender: {{ genders }}</li>
             <li tabindex="0" @click="randyCharTrait()" @keyup.enter="randyCharTrait()">Character Trait: {{ charTraits }}</li>
           </ul>
