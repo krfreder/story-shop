@@ -1,25 +1,25 @@
 <template>
   <section id="generate">
     <div>
-      <button id="button" @click="handler()">Generate</button>
+      <button id="button" @click="handler()" @keyup.enter="handler()">Generate</button>
     </div>
     <div class="table">
       <table v-show="isGenerated">
         <tr>
           <td id="bold">Genre:</td>
-          <td @click="randyGenre()">{{ genres }}</td>
+          <td tabindex="0" @click="randyGenre()" @keyup.enter="randyGenre()">{{ genres }}</td>
         </tr>
         <tr>
           <td id="bold">Starting Setting:</td>
-          <td @click="randySetting()">{{ settings }}</td>
+          <td tabindex="0" @click="randySetting()" @keyup.enter="randySetting()">{{ settings }}</td>
         </tr>
         <tr>
           <td id="bold">Main Character:</td>
           <td>
           <ul class="list">
-            <li @click="randyAge()">Age: {{ age }}</li>
-            <li @click="randyGender()">Gender: {{ genders }}</li>
-            <li @click="randyCharTrait()">Character Trait: {{ charTraits }}</li>
+            <li tabindex="0" @click="randyAge()" @keyup.enter="randyAge()">Age: {{ age }}</li>
+            <li tabindex="0" @click="randyGender()" @keyup.enter="randyGender()">Gender: {{ genders }}</li>
+            <li tabindex="0" @click="randyCharTrait()" @keyup.enter="randyCharTrait()">Character Trait: {{ charTraits }}</li>
           </ul>
           </td>
         </tr>
@@ -27,9 +27,9 @@
       <table v-show="isGenerated">
         <tr>
           <td id="purple-background-bold">Prompts:</td>
-          <td>
+          <td tabindex="0" @click="sentencerPrompts()" @keyup.enter="sentencerPrompts()">
           <ul class="list" id="two-column-list">
-            <li v-for="(prompt, index) in prompts" :key="index" @click="sentencerPrompts()">{{ index + 1 }}. {{ prompt }}</li>
+            <li v-for="(prompt, index) in prompts" :key="index">{{ index + 1 }}. {{ prompt }}</li>
           </ul>
           </td>
         </tr>
@@ -116,6 +116,10 @@ export default {
   border-radius: 10px;
   padding: 20px 100px 20px 100px;
 }
+#button:active {
+  background-color: #a29dfc;
+  text-shadow: 5px 5px 8px #76cef2;
+  }
 /* table styles */
 .table {
   margin: 5%;
@@ -141,6 +145,9 @@ export default {
   border: 4px solid #a29dfc;
   padding: 2%;
 }
+.table td:focus {
+  font-weight: bold;
+}
 #purple-background-bold {
   background-color: #93aef9;
   font-weight: bold;
@@ -150,6 +157,9 @@ export default {
   list-style-type: none;
   padding: 0;
   line-height: 1.6;
+}
+.list li:focus {
+  font-weight: bold;
 }
 #two-column-list {
   columns: 3;
