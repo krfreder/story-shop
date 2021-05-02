@@ -1,7 +1,7 @@
 <template>
   <section id="generate">
     <div>
-      <button id="button" @click="handler()" @keyup.enter="handler()">Generate</button>
+      <button id="button-generate" @click="handler()" @keyup.enter="handler()">Generate</button>
     </div>
     <div class="table">
       <table v-show="isGenerated">
@@ -107,23 +107,23 @@ export default {
   align-content: center;
 }
 /* button styles */
-#button {
+#button-generate {
   background-color: #76cef2;
-  font-size: 12rem;
+  font-size: 8rem;
   text-align: center;
   text-shadow: 5px 5px 8px #93aef9;
   border: 6px solid #58efec;
   border-radius: 10px;
   padding: 20px 100px 20px 100px;
 }
-#button:active {
+#button-generate:active {
   background-color: #a29dfc;
   text-shadow: 5px 5px 8px #76cef2;
   }
 /* table styles */
 .table {
   margin: 5%;
-  font-size: 2.6rem;
+  font-size: 1.8rem;
   text-align: left;
   text-shadow: 1px 1px 2px #b18dff;
   border: 4px solid #000000;
@@ -134,6 +134,8 @@ export default {
   flex-direction: row;
   table-layout: auto;
   width: auto;
+  /* table-layout: fixed;
+  width: auto; */
 }
 .table tr:nth-child(even) {
   background-color: #93aef9;
