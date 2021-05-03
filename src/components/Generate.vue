@@ -131,11 +131,9 @@ export default {
   border-spacing: 0;
   border-radius: 10px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   table-layout: auto;
   width: auto;
-  /* table-layout: fixed;
-  width: auto; */
 }
 .table tr:nth-child(even) {
   background-color: #93aef9;
