@@ -21,3 +21,6 @@ Planned Future Improvements:
 - Genre and Gender definitions on-hover
 - Dry code
 - One-word prompt update on-click (currently all 31 prompts updated on-click)
+- Remove gap between tables in Edge/Chrome
+
+Thank you to Jacky at writingexercsies.co.uk for the excellent list of character traits.
