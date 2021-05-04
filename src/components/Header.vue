@@ -39,8 +39,8 @@
 /* logo styles */
 #logo {
   width: auto;
-  height: 100%;
-  max-height: 100vh;
+  height: 95%;
+  max-height: 95vh;
 }
 /* text styles */
 #header-text {
