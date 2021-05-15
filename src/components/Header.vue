@@ -1,9 +1,11 @@
 <template>
-    <section>
-        <img src="../assets/ossp_logo.png" alt="Text logo reading One Stop Story Prompts"/>
-        <div>
-            <h1>How to use this site</h1>
-            <ol>
+    <section id="header">
+        <div class="container-logo">
+            <img class="logo" src="../assets/ossp_logo.png" alt="Text logo reading One Stop Story Prompts"/>
+        </div>
+        <div class="container-content">
+            <h1 class="header-text">How to use this site</h1>
+            <ol class="list">
                 <li>Scroll down</li>
                 <li>Click "Generate"</li>
                 <li>You will randomly receive:
@@ -29,4 +31,10 @@
 </template>
 
 <style scoped>
+#header {}
+.container-logo {}
+.logo {}
+.container-content {}
+.header-text{}
+.list{}
 </style>

@@ -1,10 +1,10 @@
 <template>
-  <section>
-    <div>
-      <button @click="handler()" @keyup.enter="handler()">Generate</button>
+  <section id="generate">
+    <div class="container-button">
+      <button class="button-generate" @click="handler()" @keyup.enter="handler()">Generate</button>
     </div>
-    <div>
-      <table v-show="isGenerated">
+    <div class="container-tables">
+      <table class="table1" v-show="isGenerated">
         <tr>
           <td>Genre:</td>
           <td tabindex="0" @click="randyGenre()" @keyup.enter="randyGenre()">{{ genres }}</td>
@@ -16,7 +16,7 @@
         <tr>
           <td>Main Character:</td>
           <td>
-          <ul>
+          <ul class="list1">
             <li tabindex="0" @click="randyAge()" @keyup.enter="randyAge()" >Age: {{ age }}</li>
             <li tabindex="0" @click="randyGender()" @keyup.enter="randyGender()">Gender: {{ genders }}</li>
             <li tabindex="0" @click="randyCharTrait()" @keyup.enter="randyCharTrait()">Character Trait: {{ charTraits }}</li>
@@ -24,11 +24,11 @@
           </td>
         </tr>
       </table>
-      <table v-show="isGenerated">
+      <table class="table2" v-show="isGenerated">
         <tr>
           <td>Prompts:</td>
           <td tabindex="0" @click="sentencerPrompts()" @keyup.enter="sentencerPrompts()">
-          <ul>
+          <ul class="list2">
             <li v-for="(prompt, index) in prompts" :key="index">{{ index + 1 }}. {{ prompt }}</li>
           </ul>
           </td>
@@ -95,4 +95,12 @@ export default {
 </script>
 
 <style scoped>
+#generate {}
+.container-button {}
+.button-generate {}
+.container-tables {}
+.table1 {}
+.table2 {}
+.list1 {}
+.list2 {}
 </style>
