@@ -1,9 +1,9 @@
 <template>
-    <section class="header">
-        <img id="logo" src="../assets/ossp_logo.png" alt="Text logo reading One Stop Story Prompts"/>
+    <section>
+        <img src="../assets/ossp_logo.png" alt="Text logo reading One Stop Story Prompts"/>
         <div>
-            <h1 id="header-text">How to use this site</h1>
-            <ol id="list">
+            <h1>How to use this site</h1>
+            <ol>
                 <li>Scroll down</li>
                 <li>Click "Generate"</li>
                 <li>You will randomly receive:
@@ -29,26 +29,4 @@
 </template>
 
 <style scoped>
-/* general styles */
-.header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-/* logo styles */
-#logo {
-  width: auto;
-  height: 95%;
-  max-height: 95vh;
-}
-/* text styles */
-#header-text {
-    font-size: 4rem;
-}
-#list {
-    font-size: 2rem;
-    list-style-type:decimal;
-    line-height: 1.3;
-}
 </style>

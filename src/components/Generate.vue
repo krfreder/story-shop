@@ -1,22 +1,22 @@
 <template>
-  <section id="generate">
+  <section>
     <div>
-      <button id="button-generate" @click="handler()" @keyup.enter="handler()">Generate</button>
+      <button @click="handler()" @keyup.enter="handler()">Generate</button>
     </div>
-    <div class="table">
+    <div>
       <table v-show="isGenerated">
         <tr>
-          <td id="bold">Genre:</td>
+          <td>Genre:</td>
           <td tabindex="0" @click="randyGenre()" @keyup.enter="randyGenre()">{{ genres }}</td>
         </tr>
         <tr>
-          <td id="bold">Starting Setting:</td>
+          <td>Starting Setting:</td>
           <td tabindex="0" @click="randySetting()" @keyup.enter="randySetting()">{{ settings }}</td>
         </tr>
         <tr>
-          <td id="bold">Main Character:</td>
+          <td>Main Character:</td>
           <td>
-          <ul class="list">
+          <ul>
             <li tabindex="0" @click="randyAge()" @keyup.enter="randyAge()" >Age: {{ age }}</li>
             <li tabindex="0" @click="randyGender()" @keyup.enter="randyGender()">Gender: {{ genders }}</li>
             <li tabindex="0" @click="randyCharTrait()" @keyup.enter="randyCharTrait()">Character Trait: {{ charTraits }}</li>
@@ -26,9 +26,9 @@
       </table>
       <table v-show="isGenerated">
         <tr>
-          <td id="purple-background-bold">Prompts:</td>
+          <td>Prompts:</td>
           <td tabindex="0" @click="sentencerPrompts()" @keyup.enter="sentencerPrompts()">
-          <ul class="list" id="two-column-list">
+          <ul>
             <li v-for="(prompt, index) in prompts" :key="index">{{ index + 1 }}. {{ prompt }}</li>
           </ul>
           </td>
@@ -95,78 +95,4 @@ export default {
 </script>
 
 <style scoped>
-/* general styles */
-#generate {
-  margin-top: 15%;
-  height: 100%;
-  text-transform: capitalize;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-/* button styles */
-#button-generate {
-  background-color: #76cef2;
-  font-size: 8rem;
-  text-align: center;
-  text-shadow: 5px 5px 8px #93aef9;
-  border: 6px solid #58efec;
-  border-radius: 10px;
-  padding: 20px 100px 20px 100px;
-}
-#button-generate:active {
-  background-color: #a29dfc;
-  text-shadow: 5px 5px 8px #76cef2;
-  }
-/* table styles */
-.table {
-  margin: 5%;
-  font-size: 1.8rem;
-  text-align: left;
-  text-shadow: 1px 1px 2px #b18dff;
-  border: 4px solid #000000;
-  border-collapse: collapse;
-  border-spacing: 0;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  table-layout: auto;
-  width: auto;
-}
-.table tr:nth-child(even) {
-  background-color: #93aef9;
-}
-.table tr:nth-child(odd) {
-  background-color: #85bef6;
-}
-.table td {
-  border: 4px solid #a29dfc;
-  padding: 2%;
-}
-.table td:focus {
-  font-weight: bold;
-}
-#purple-background-bold {
-  background-color: #93aef9;
-  font-weight: bold;
-}
-/* list styles */
-.list {
-  list-style-type: none;
-  padding: 0;
-  line-height: 1.6;
-}
-.list li:focus {
-  font-weight: bold;
-}
-#two-column-list {
-  columns: 3;
-  -webkit-columns: 3;
-  -moz-columns: 3;
-}
-#bold {
-  font-weight: bold;
-}
 </style>
