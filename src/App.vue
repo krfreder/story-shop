@@ -15,15 +15,4 @@ export default {
 </script>
 
 <style>
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #a29dfc;
-}
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 </style>

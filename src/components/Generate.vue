@@ -1,42 +1,25 @@
 <template>
-  <section id="generate">
-    <div class="container-button">
-      <button class="button-generate" @click="handler()" @keyup.enter="handler()">Generate</button>
-    </div>
-    <div class="container-tables">
-      <table class="table1" v-show="isGenerated">
-        <tr>
-          <td>Genre:</td>
-          <td tabindex="0" @click="randyGenre()" @keyup.enter="randyGenre()">{{ genres }}</td>
-        </tr>
-        <tr>
-          <td>Starting Setting:</td>
-          <td tabindex="0" @click="randySetting()" @keyup.enter="randySetting()">{{ settings }}</td>
-        </tr>
-        <tr>
-          <td>Main Character:</td>
-          <td>
-          <ul class="list1">
-            <li tabindex="0" @click="randyAge()" @keyup.enter="randyAge()" >Age: {{ age }}</li>
-            <li tabindex="0" @click="randyGender()" @keyup.enter="randyGender()">Gender: {{ genders }}</li>
-            <li tabindex="0" @click="randyCharTrait()" @keyup.enter="randyCharTrait()">Character Trait: {{ charTraits }}</li>
-          </ul>
-          </td>
-        </tr>
-      </table>
-      <table class="table2" v-show="isGenerated">
-        <tr>
-          <td>Prompts:</td>
-          <td tabindex="0" @click="sentencerPrompts()" @keyup.enter="sentencerPrompts()">
-          <ul class="list2">
-            <li v-for="(prompt, index) in prompts" :key="index">{{ index + 1 }}. {{ prompt }}</li>
-          </ul>
-          </td>
-        </tr>
-      </table>
+  <section class="generate">
+    <div class="container">
+      <button class="button-generate"></button>
+      <div class="wrapper">
+        <table class="table-top">
+        </table>
+        <table class="table-bottom">
+        </table>
+      </div>
     </div>
   </section>
 </template>
+
+<style scoped>
+#section {}
+.container {}
+.button-generate {}
+.wrapper {}
+.table-top {}
+.table-bottom {}
+</style>
 
 <script>
 import { genreList } from '../js/genreList';
@@ -94,13 +77,3 @@ export default {
 }
 </script>
 
-<style scoped>
-#generate {}
-.container-button {}
-.button-generate {}
-.container-tables {}
-.table1 {}
-.table2 {}
-.list1 {}
-.list2 {}
-</style>
