@@ -1,11 +1,37 @@
 <template>
   <section class="generate">
     <div class="container">
-      <button class="button-generate"></button>
-      <div class="wrapper">
+      <button class="button-generate" @click="handler()" @keyup.enter="handler()">Generate</button>
+      <div class="wrapper" v-show="isGenerated">
         <table class="table-top">
+          <tr>
+            <td>Genre:</td>
+            <td tabindex="0" @click="randyGenre()" @keyup.enter="randyGenre()">{{ genres }}</td>
+          </tr>
+          <tr>
+            <td>Starting Setting:</td>
+            <td tabindex="0" @click="randySetting()" @keyup.enter="randySetting()">{{ settings }}</td>
+          </tr>
+          <tr>
+            <td>Main Character:</td>
+            <td>
+              <ul>
+                <li tabindex="0" @click="randyAge()" @keyup.enter="randyAge()" >Age: {{ age }}</li>
+                <li tabindex="0" @click="randyGender()" @keyup.enter="randyGender()">Gender: {{ genders }}</li>
+                <li tabindex="0" @click="randyCharTrait()" @keyup.enter="randyCharTrait()">Character Trait: {{ charTraits }}</li>
+              </ul>
+            </td>
+          </tr>
         </table>
         <table class="table-bottom">
+          <tr>
+            <td>Prompts:</td>
+            <td tabindex="0" @click="sentencerPrompts()" @keyup.enter="sentencerPrompts()">
+              <ul>
+                <li v-for="(prompt, index) in prompts" :key="index">{{ index + 1 }}. {{ prompt }}</li>
+              </ul>
+            </td>
+          </tr>
         </table>
       </div>
     </div>
