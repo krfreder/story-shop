@@ -3,7 +3,7 @@
     <div class="container">
       <button class="button-generate" @click="handler()" @keyup.enter="handler()">Generate</button>
       <div class="wrapper" v-show="isGenerated">
-        <table class="table-top">
+        <table class="table-left">
           <tr>
             <td>Genre:</td>
             <td tabindex="0" @click="randyGenre()" @keyup.enter="randyGenre()">{{ genres }}</td>
@@ -15,7 +15,7 @@
           <tr>
             <td>Main Character:</td>
             <td>
-              <ul>
+              <ul class="list">
                 <li tabindex="0" @click="randyAge()" @keyup.enter="randyAge()" >Age: {{ age }}</li>
                 <li tabindex="0" @click="randyGender()" @keyup.enter="randyGender()">Gender: {{ genders }}</li>
                 <li tabindex="0" @click="randyCharTrait()" @keyup.enter="randyCharTrait()">Character Trait: {{ charTraits }}</li>
@@ -23,11 +23,11 @@
             </td>
           </tr>
         </table>
-        <table class="table-bottom">
+        <table class="table-right">
           <tr>
             <td>Prompts:</td>
             <td tabindex="0" @click="sentencerPrompts()" @keyup.enter="sentencerPrompts()">
-              <ul>
+              <ul class="list">
                 <li v-for="(prompt, index) in prompts" :key="index">{{ index + 1 }}. {{ prompt }}</li>
               </ul>
             </td>
@@ -40,11 +40,67 @@
 
 <style scoped>
 #section {}
-.container {}
-.button-generate {}
-.wrapper {}
-.table-top {}
-.table-bottom {}
+.container {
+    padding: 0 8px;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.button-generate {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 12vw;
+    text-align: center;
+    margin: 15px auto;
+    /* margin: 10px 0; */
+    border: 6px solid;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+.wrapper {
+    font-family:Baskerville, 'Arial Narrow', Arial, sans-serif;
+    font-size: 6vw;
+    text-align: left;
+    border: 2px solid;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 10px;
+    table-layout: auto;
+    width: auto;
+}
+.wrapper td {
+  border: 1px solid;
+  padding: 2%;
+}
+.wrapper tr:first-child td {
+  border-top: 0;
+}
+.wrapper tr td:first-child {
+  border-left: 0;
+}
+.wrapper tr:last-child td {
+  border-bottom: 0;
+}
+.wrapper tr td:last-child {
+  border-right: 0;
+}
+.table-left {
+    /* text-align: left; */
+}
+.list {
+    list-style-type: none;
+    padding: 0;
+    line-height: 1.6;
+}
+.table-right {
+    /* text-align: left; */
+}
+.table-right tr td:first-child {
+  padding: 10px;
+}
 </style>
 
 <script>

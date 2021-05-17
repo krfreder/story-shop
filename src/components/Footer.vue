@@ -6,5 +6,10 @@
 
 <style scoped>
 #section {}
-.footer-content {}
+.footer-content {
+    display: block;
+    text-align: center;
+    font-family:Baskerville, 'Arial Narrow', Arial, sans-serif;
+    font-size: 4vw;
+}
 </style>

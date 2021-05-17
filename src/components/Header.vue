@@ -32,9 +32,31 @@
 
 <style scoped>
 #header {}
-.container {}
-.logo {}
+.container {
+    padding: 0 8px;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    justify-content: space-evenly;
+}
+.logo {
+    max-width: 95%;
+    height: auto;
+}
 .wrapper {}
-.heading-text {}
-.list {}
+.heading-text {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 10vw;
+    text-align: center;
+    line-height: 1.3;
+}
+.list {
+    font-family:Baskerville, 'Arial Narrow', Arial, sans-serif;
+    font-size: 6vw;
+    list-style-type:decimal;
+}
 </style>
